@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    <link href="{{STATIC_URL}}css/bootstrap.css " rel = "stylesheet" type="text/css">
+    <title>{% block title %}Untitled{% endblock %} | Todo list with permissions</title>
+</head>
+<body>
+<div class = "container">
+    <div class="alert alert-info">
+        <h1>LISTA DE USUARIOS</h1>                                                                                                 <h4>Examen De Lp2</h4> 
+
+        <img src="fc,140x140,creme.u5" class="img-polaroid">
+
+        <span class="input-group-addon"><span class="glyphicon
+                glyphicon-globe"></span></span>
+    </div>
+
+        <a type="button" class="btn btn-info" href="{% url 'app_list' %}">Index</a>{% if perms.todo.add_todo %}   
+        <a type="button" class="btn btn-info" href="{% url 'app_create' %}">Add Todo</a>{% endif %}
+
+        {% if user.is_authenticated %}
+           <p class="navbar-text pull-right">    
+               <strong>Usuario {{user.username}}</strong>
+               
+        <span class="glyphicon glyphicon-user"></span> 
+           </p>
+           {% endif %}
+
+
+        <button type="submit" class="btn btn-primary"><span class="glyphicon
+                glyphicon-lock"></span> Logout</button>   
+
+
+
+
+    <div class =  "well">         
+{% block content %}
+The end user should never ever see this!
+{% endblock %} 
+    </div>
+</div>
+ 
+        </div> 
+
+
+<script type = "text/javaScript" src= "{{STATIC_UR}}js/bootstrap.js"></script>
+</body>
+</html>

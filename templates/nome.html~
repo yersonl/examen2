@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{STATIC_URL}}css/bootstrap.css " rel = "stylesheet" type="text/css">
+    <title></title>
+</head>
+
+<body>
+    <div class = "well">
+    
+        <h1>Error!</h1>
+            <h4>el usuario no existe o escribio mal su contraseña</h4>
+        <button type="button" class="btn btn-info" href="/login">Intentar otra vez</button>
+</div>
+<script type = "text/javaScript" src= "{{STATIC_UR}}js/bootstrap.js"></script>
+</body>
+</html>
